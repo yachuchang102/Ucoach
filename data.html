@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UCoach精準羽球資料收集管理平台</title>
+
+<script src="https://kit.fontawesome.com/632439defc.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+        <div class="alert alert-primary d-flex justify-content-between align-items-center" role="alert">
+                <img src="img/Banner.png" alt="logo">
+                <div><button type="button" class="btn btn-outline-secondary"><a href="index.html" style="text-decoration:none" class="text-secondary">登出</a></button></div>
+            </div>
+    <div class="container">
+            <div class="row mt-5">
+                    <div class="input-group mb-3 col-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="姓名" aria-label="name" aria-describedby="basic-addon1">
+                    </div>
+
+                    <div class="input-group mb-3 col-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="basic-addon1"><i class="fas fa-id-card"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="ID" aria-label="id" aria-describedby="basic-addon1">
+                    </div>
+
+                    <input  class="col-3 form-control" type="text" name="daterange" value="01/01/2018 - 01/15/2018" />
+                   <div>
+                        <button type="button" class="btn btn-primary mx-2 click ">Search</button>
+
+                   </div>
+            </div>
+            <ul class="nav nav-tabs mt-4" id="myTab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">影像資料</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">慣性全身感測</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">慣性球拍感測</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" id="brain-tab" data-toggle="tab" href="#brain" role="tab" aria-controls="brain" aria-selected="false">腦波</a>
+                          </li>
+                    <li class="nav-item">
+                                <a class="nav-link" id="eye-tab" data-toggle="tab" href="#eye" role="tab" aria-controls="eye" aria-selected="false">眼動</a>
+                        </li>
+                  </ul>
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active row" id="home" role="tabpanel" aria-labelledby="home-tab">
+                     
+                        
+                        
+                        <h4 class="pb-2 mt-4">影像資料檔案屬性欄位</h6>         
+
+                        <table class="table table-striped mt-2 test" style="display:none">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">＃</th>
+                                    <th scope="col">檔案大小（下載）</th>
+                                    <th scope="col">時間長度</th>
+                                    <th scope="col">開始時間</th>
+                                    <th scope="col">收案動作</th>
+                                    <th scope="col">上傳時間</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">1</th>
+                                    <td><a href="#" class="text-primary btn2">250KB</a></td>
+                                    <td>02:30</td>
+                                    <td>02:30</td>
+                                    <td>重訓</td>
+                                    <td>2019-06-25</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">2</th>
+                                    <td><a href="#" class="text-primary btn2">312KB</a></td>
+                                    <td>01:50</td>
+                                    <td>01:50</td>
+                                    <td>羽球</td>
+                                    <td>2019-06-25</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td><a href="#" class="text-primary btn2">516KB</a></td>
+                                    <td>01:33</td>
+                                    <td>01:33</td>
+                                    <td>羽球</td>
+                                    <td>2019-06-25</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">4</th>
+                                    <td><a href="#" class="text-primary btn2">103KB</a></td>
+                                    <td>02:03</td>
+                                    <td>02:03</td>
+                                    <td>重訓</td>
+                                    <td>2019-06-24</td>
+                                   </tr>
+                                    <tr>
+                                    <th scope="row">5</th>
+                                    <td><a href="#" class="text-primary btn2">59KB</a></td>
+                                    <td>01:33</td>
+                                    <td>01:33</td>
+                                    <td>羽球</td>
+                                    <td>2019-06-24</td>
+                                    </tr>
+                                </tbody>
+                              </table>
+          
+                                    
+                           
+
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-laelledby="profile-tab">
+                            
+                            <h4 class="pb-2 mt-4">慣性全身感測檔案屬性欄位</h6>         
+    
+                            <table class="table table-striped mt-2 test" style="display:none">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">＃</th>
+                                        <th scope="col">檔案大小（下載）</th>
+                                        <th scope="col">時間長度</th>
+                                        <th scope="col">開始時間</th>
+                                        <th scope="col">收案動作</th>
+                                        <th scope="col">上傳時間</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row">1</th>
+                                        <td><a href="#" class="text-primary btn2">250KB</a></td>
+                                        <td>02:30</td>
+                                        <td>02:30</td>
+                                        <td>重訓</td>
+                                        <td>2019-06-25</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">2</th>
+                                        <td><a href="#" class="text-primary btn2">312KB</a></td>
+                                        <td>01:50</td>
+                                        <td>01:50</td>
+                                        <td>羽球</td>
+                                        <td>2019-06-25</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">3</th>
+                                        <td><a href="#" class="text-primary btn2">516KB</a></td>
+                                        <td>01:33</td>
+                                        <td>01:33</td>
+                                        <td>羽球</td>
+                                        <td>2019-06-25</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">4</th>
+                                        <td><a href="#" class="text-primary btn2">103KB</a></td>
+                                        <td>02:03</td>
+                                        <td>02:03</td>
+                                        <td>重訓</td>
+                                        <td>2019-06-24</td>
+                                       </tr>
+                                        <tr>
+                                        <th scope="row">5</th>
+                                        <td><a href="#" class="text-primary btn2">59KB</a></td>
+                                        <td>01:33</td>
+                                        <td>01:33</td>
+                                        <td>羽球</td>
+                                        <td>2019-06-24</td>
+                                        </tr>
+                                    </tbody>
+                                  </table>
+              
+                                        
+                               
+
+                    </div>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+                            <h4 class="pb-2 mt-4">慣性球拍感測屬性欄位</h6>         
+    
+                                <table class="table table-striped mt-2 test" style="display:none">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">＃</th>
+                                            <th scope="col">檔案大小（下載）</th>
+                                            <th scope="col">時間長度</th>
+                                            <th scope="col">開始時間</th>
+                                            <th scope="col">收案動作</th>
+                                            <th scope="col">上傳時間</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="row">1</th>
+                                            <td></td>
+                                            <td>尚無資料</td>
+                                            <td>尚無資料</td>
+                                            <td>尚無資料</td>
+                                            <td>尚無資料</td>
+                                          </tr>
+                                         
+                                         
+                                          
+                                        </tbody>
+                                      </table>
+                  
+
+                    </div>
+                    <div class="tab-pane fade" id="brain" role="tabpanel" aria-labelledby="brain-tab">...</div>
+                    <div class="tab-pane fade" id="eye" role="tabpanel" aria-labelledby="eye-tab">...</div>
+
+                  </div>
+        
+
+    </div>
+
+<!--通過form實現表單下載-->
+<script>
+var $eleBtn2 = $(".btn2");
+
+        $eleBtn2.click(function(){
+            var $eleForm = $("<form method='get'></form>");
+
+            $eleForm.attr("action","https://codeload.github.com/douban/douban-client/legacy.zip/master");
+
+            $(document.body).append($eleForm);
+
+            //提交表單，實現下載
+            $eleForm.submit();
+        });
+</script>
+    
+    <!--月曆-->
+    <script>
+    $(function() {
+      $('input[name="daterange"]').daterangepicker({
+        opens: 'left'
+      }, function(start, end, label) {
+        console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+      });
+    });
+    </script>
+
+    <!--執行 表格show和hide-->
+    <script>
+            $(document).ready(function(){
+              $(".click").click(function(){
+                $(".test").show();
+              })
+            });
+    </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
